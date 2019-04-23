@@ -1,14 +1,20 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+     G00358931
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
+//background image defined in home.scss
+<ion-content padding class="plimage">
+  <h3>Pokemon</h3>
   <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
+    Hello and welcome to the Pokemon app.
   </p>
+
+    <button ion-button  *ngFor="let p of pokemon">
+        click to the {{p.name}} pokemon
+    </button>  
+
 </ion-content>
