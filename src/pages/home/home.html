@@ -11,10 +11,23 @@
   <h3>Pokemon</h3>
   <p>
     Hello and welcome to the Pokemon app.
+    <br>
+    Here we have the different Pokemon Types.
+    <br>
+    They are all very cool, some more than others. 
   </p>
-
-    <button ion-button  *ngFor="let p of pokemon">
-        click to the {{p.name}} pokemon
-    </button>  
-
+    <ion-list *ngFor="let p of pokemon">
+        <h2>{{p.name}} Pokemon 
+          <br>
+          <button size="large"fill="clear">buger</button>
+        </h2>
+    </ion-list> 
+    <h1>___________________________</h1>
+    <button ion-button *ngFor="let l of location">
+        <h2>{{l.name}}</h2>
+    </button> 
+   
+    <button ion-button *ngFor="let s of species">
+        <h2>{{s.name}}</h2>
+    </button> 
 </ion-content>

@@ -14,7 +14,16 @@ export class PokemonProvider {
   constructor(public http: HttpClient) {
     console.log('Hello PokemonProvider Provider');
   }
-getPokemon():Observable<any>{
-  return this.http.get("https://pokeapi.co/api/v2/type")
+getPokemonType():Observable<any>{
+  return this.http.get("https://pokeapi.co/api/v2/type/")
 }
+
+getPokemonLocation():Observable<any>{
+  return this.http.get("https://pokeapi.co/api/v2/location/")
+}
+
+getPokemonSpecies():Observable<any>{
+  return this.http.get("https://pokeapi.co/api/v2/pokemon-species/")
+}
+
 }

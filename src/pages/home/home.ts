@@ -8,14 +8,31 @@ import {PokemonProvider} from '../../providers/pokemon/pokemon';
 })
 export class HomePage {
   pokemon:any=[];
+  location:any[];
+  species:any[];
   constructor(public navCtrl: NavController,
   private pokeProvider:PokemonProvider) {
   }
 
   ionViewDidLoad(){
-    this.pokeProvider.getPokemon().subscribe((data)=>
+    this.pokeProvider.getPokemonType().subscribe((data)=>
   {
     this.pokemon=data.results;
   })
   }
+
+  ionViewDidLoaded(){
+    this.pokeProvider.getPokemonLocation().subscribe((data)=>
+  {
+    this.location=data.results;
+  })
+  }
+
+  ionViewHasLoaded(){
+    this.pokeProvider.getPokemonSpecies().subscribe((data)=>
+  {
+    this.species=data.results;
+  })
+  }
+
 }
