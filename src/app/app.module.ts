@@ -12,7 +12,8 @@ import { PokemonProvider } from '../providers/pokemon/pokemon';
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    
   ],
   imports: [
     BrowserModule,
@@ -22,7 +23,8 @@ import { PokemonProvider } from '../providers/pokemon/pokemon';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+  
   ],
   providers: [
     StatusBar,

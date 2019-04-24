@@ -1,0 +1,49 @@
+<!--
+  Generated template for the MoviesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+       G00358931
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  //https://ionicframework.com/docs/api/card
+  //background image defined in home.scss
+<ion-content padding class="plimage"> 
+    <h3>Pokemon</h3>
+    <p>
+      Hello and welcome to the Pokemon app!
+    </p>
+    <button ion-button color="light" (click)="openHomePage()">Learn about Pokemon Types!</button>
+    <button ion-button color="light" (click)="openLocationPage()">Learn about Locations in Pokemon!</button>
+    <button ion-button color="light" (click)="openIconicPage()">Learn about Iconic Pokemon!</button>
+  
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Pokemon Movies</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Pokemon was Released in the mid 90's <br>
+        and was an instant cultural phenomenon.<br> 
+        It had a cartoon series and several movies<br>
+        made which popularized some Pokemon<br> 
+        such Pikachu who is now as recognizable<br>
+        as Mario or Sonic.  
+        <br>
+        <br>
+        <ion-img width="270" height="185" src="https://media1.tenor.com/images/03437a3a7a4a9084caecf563850e3569/tenor.gif?itemid=9054712"></ion-img> 
+      </ion-card-content>
+    </ion-card>
+      <h1>___________________________</h1>
+  <ion-list>
+    <ion-item *ngFor="let m of movies">
+      <h2>{{m.Title}}</h2>
+      <p> {{m.Year}}</p>
+      <ion-img height=150 width=100 src=" {{m.Poster}}"></ion-img>
+    </ion-item>
+  </ion-list>
+</ion-content>

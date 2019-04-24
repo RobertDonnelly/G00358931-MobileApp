@@ -18,12 +18,17 @@ getPokemonType():Observable<any>{
   return this.http.get("https://pokeapi.co/api/v2/type/")
 }
 
+
 getPokemonLocation():Observable<any>{
   return this.http.get("https://pokeapi.co/api/v2/location/")
 }
 
 getPokemonSpecies():Observable<any>{
   return this.http.get("https://pokeapi.co/api/v2/pokemon-species/")
+}
+
+getPokemonMovie():Observable<any>{
+  return this.http.get("http://www.omdbapi.com/?apikey=dd0133f8&s=pokemon");
 }
 
 }

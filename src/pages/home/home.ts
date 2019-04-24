@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import {PokemonProvider} from '../../providers/pokemon/pokemon';
+import {LocationsPage} from '../locations/locations';
+import{SpeciesPage} from '../species/species';
+import {MoviesPage} from '../movies/movies';
 
 @Component({
   selector: 'page-home',
@@ -8,8 +11,6 @@ import {PokemonProvider} from '../../providers/pokemon/pokemon';
 })
 export class HomePage {
   pokemon:any=[];
-  location:any[];
-  species:any[];
   constructor(public navCtrl: NavController,
   private pokeProvider:PokemonProvider) {
   }
@@ -21,18 +22,13 @@ export class HomePage {
   })
   }
 
-  ionViewDidLoaded(){
-    this.pokeProvider.getPokemonLocation().subscribe((data)=>
-  {
-    this.location=data.results;
-  })
+  openLocationPage(){
+    this.navCtrl.push('LocationsPage');
   }
-
-  ionViewHasLoaded(){
-    this.pokeProvider.getPokemonSpecies().subscribe((data)=>
-  {
-    this.species=data.results;
-  })
+  openIconicPage(){
+    this.navCtrl.push('SpeciesPage');
   }
-
+  openMoviePage(){
+    this.navCtrl.push('MoviesPage');
+  }
 }

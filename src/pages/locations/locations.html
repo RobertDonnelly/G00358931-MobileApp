@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+     G00358931
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+//https://ionicframework.com/docs/api/card
+//background image defined in home.scss
+<ion-content padding class="plimage">
+  <h3>Pokemon</h3>
+  <p>
+    Hello and welcome to the Pokemon app!
+  </p>
+  <button ion-button (click)="openHomePage()">Learn about Pokemon Types!</button>
+  <button ion-button (click)="openIconicPage()">Learn about Iconic Pokemon!</button>
+  <button ion-button (click)="openMoviePage()">Learn about Pokemon Movies!</button>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Locations in Pokemon</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+     In the world of Pokemon there is a huge<br>
+     variety of places to vist. Players cans go to<br>
+     big cities or small coastal fishing towns.<br> 
+     You are also free to wander forests<br>
+     and caves which are more dangerous and<br>
+    home to different pokemon types. 
+      <br>
+      <br>
+      <ion-img width="270" height="210" src="http://i.imgur.com/lgTHfdL.jpg"></ion-img> 
+    </ion-card-content>
+  </ion-card>
+ 
+    <h1>___________________________</h1>
+    
+    <ion-list *ngFor="let l of location">
+        <h2>{{l.name}}</h2>
+        <br>   
+    </ion-list>
+<br>
+    <br>
+    <h1>___________________________</h1> 
+</ion-content>
