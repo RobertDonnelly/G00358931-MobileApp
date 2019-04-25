@@ -10,7 +10,7 @@
 <ion-content padding class="plimage">
   <h3>Pokemon</h3>
   <p>
-    Hello and welcome to the Pokemon app!
+    Welcome to the Pokemon Locations Page!
   </p>
   <button ion-button (click)="openHomePage()">Learn about Pokemon Types!</button>
   <button ion-button (click)="openIconicPage()">Learn about Iconic Pokemon!</button>
@@ -20,24 +20,25 @@
       <ion-card-title>Locations in Pokemon</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-     In the world of Pokemon there is a huge<br>
-     variety of places to vist. Players cans go to<br>
-     big cities or small coastal fishing towns.<br> 
-     You are also free to wander forests<br>
-     and caves which are more dangerous and<br>
+     In the world of Pokemon there is a huge
+     variety of places to vist. Players cans go to
+     big cities or small coastal fishing towns.
+     You are also free to wander forests
+     and caves which are more dangerous and
     home to different pokemon types. 
-      <br>
-      <br>
+      <br><br>
       <ion-img width="270" height="210" src="http://i.imgur.com/lgTHfdL.jpg"></ion-img> 
     </ion-card-content>
   </ion-card>
- 
-    <h1>___________________________</h1>
-    
+  <br>  
+   
+  <ion-card>
+    <ion-card-content>
+      Here is a list of all the areas you can visit in the origional Pokemon Games
+    </ion-card-content>
+  </ion-card>
+  <br>  
     <ion-list *ngFor="let l of location">
-        <h2>{{l.name}}</h2>
-        <br>   
-    </ion-list>
-    <br><br><br><br><br><br>
-    <h1>___________________________</h1> 
+        <h2>{{l.name}}</h2> <br>   
+    </ion-list>  <br><br><br><br><br><br><br>   
 </ion-content>

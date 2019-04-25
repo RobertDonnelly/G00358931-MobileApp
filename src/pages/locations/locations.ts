@@ -26,7 +26,7 @@ export class LocationsPage {
   ionViewDidLoad(){
     this.pokeProvider.getPokemonLocation().subscribe((data)=>
   {
-    this.location=data.results;
+    this.location=data.locations;
   })
   }
 

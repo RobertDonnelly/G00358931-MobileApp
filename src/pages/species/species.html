@@ -5,11 +5,11 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
-//background image defined in home.scss
+<!--background image defined in .scss-->
 <ion-content padding class="plimage">
   <h3>Pokemon</h3>
   <p>
-    Hello and welcome to the Pokemon app!
+    welcome to the Pokemon Icons page!
   </p>
   <button ion-button color="light" (click)="openHomePage()">Learn about Pokemon Types!</button>
   <button ion-button color="light" (click)="openLocationPage()">Learn about Locations in Pokemon!</button>
@@ -17,23 +17,24 @@
  
   <ion-card><!--//https://ionicframework.com/docs/api/card-->
     <ion-card-header>
-      <ion-card-title>Iconic Pokemon</ion-card-title>
+      <ion-card-title>Early Pokemon</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-     pokemon icons. 
+    The Pokemon games Red,Blue and Yellow started out with an origional 151 pokemon for
+    players to  try and collect from the common pidgey to the ultra rare Mewtwo.
       <br>
       <br>
       <ion-img width="270" height="150" src="https://vignette.wikia.nocookie.net/pokemon/images/2/25/Ash%27s_Charizard.png/revision/latest?cb=20151222015223"></ion-img> 
     </ion-card-content>
   </ion-card>
- 
-    <h1>___________________________</h1>
-    
+  <br>    
+  <ion-card>
+    <ion-card-content>
+        Below is a list of the origional 151 Pokemon.
+    </ion-card-content>
+  </ion-card>
+  <br>    
     <ion-list *ngFor="let s of species">
-        <h2>{{s.name}}</h2>
-        <br>   
-    </ion-list>
-<br>
-    <br>
-    <h1>___________________________</h1>
-</ion-content>
+        <h3>{{s.pokemon_species.name}}</h3>
+    </ion-list><br> <br><br>
+  </ion-content>

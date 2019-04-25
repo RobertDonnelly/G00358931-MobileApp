@@ -5,17 +5,22 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
-//https://ionicframework.com/docs/api/card
-//background image defined in home.scss
+
+<!--background image defined in .scss-->
 <ion-content padding class="plimage">
   <h3>Pokemon</h3>
   <p>
-    Hello and welcome to the Pokemon app!
+    Hello and welcome to the Pokemon Type Page!
   </p>
+  <button (click)="openFavorite()" ion-button color="secondary">select favorite Pokemon Game</button>
+  <br>
+<ion-title class="ion-text-center">Your Favorite Pokemon Game:<br><br>{{information}}</ion-title>
+ <br> 
   <button ion-button color="secondary" (click)="openLocationPage()">Learn about Locations in Pokemon!</button>
   <button ion-button color="secondary" (click)="openIconicPage()">Learn about Iconic Pokemon!</button>
   <button ion-button color="secondary" (click)="openMoviePage()">Learn about Pokemon Movies!</button>
-
+  
+  <!--https://ionicframework.com/docs/api/card-->
   <ion-card>
     <ion-card-header>
       <ion-card-title>Pokemon Types</ion-card-title>
@@ -24,20 +29,19 @@
       Pokemon come in all sorts of different types.
       They can be similar to organic animals like birds(normal type)
       or fish(water type) but can also be quite strange such as the rock Pokemon Onix
-      <br>
-      <br>
+      <br><br>
       <ion-img width="270" height="185" src="https://vignette.wikia.nocookie.net/pokemon/images/3/34/Bruno_Onix.png/revision/latest?cb=20171021213108"></ion-img> 
     </ion-card-content>
   </ion-card>
-  <h1>___________________________</h1>
-
-    <ion-list *ngFor="let p of pokemon">
-        <h2>{{p.name}} Pokemon 
-          <br>
-        <button ion-button color="secondary">set as fav type</button>
-        </h2>
-    </ion-list> 
-    <br>
-    <br>
-    <h1>___________________________</h1>
-</ion-content>
+  
+  <br>
+<ion-card>
+    <ion-card-content>
+  <h2>Below is a list of every single type of Pokemon availibe in the game!</h2>
+</ion-card-content>
+</ion-card>
+  <br>
+  <ion-list *ngFor="let p of pokemon">
+      <h2>{{p.name}} Pokemon <br></h2>
+  </ion-list> <br> <br>  <br>
+  </ion-content>

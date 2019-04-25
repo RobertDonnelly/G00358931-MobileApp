@@ -1,0 +1,44 @@
+<!--
+  Generated template for the GamePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Favorite Game</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="plimage">
+  <ion-list radio-group [(ngModel)]="myfavorite">
+    <ion-item>
+      <ion-label><ion-img width="100" height="100" src="https://cdn.bulbagarden.net/upload/thumb/8/80/Red_EN_boxart.png/200px-Red_EN_boxart.png"></ion-img> Pokemon Red</ion-label>
+      <ion-radio value="Pokemon Red"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label><ion-img width="100" height="100" src="https://cdn.bulbagarden.net/upload/thumb/5/5a/Blue_EN_boxart.png/600px-Blue_EN_boxart.png"></ion-img>Pokemon Blue</ion-label>
+      <ion-radio value="Pokemon Blue"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label><ion-img width="100" height="100" src="https://cdn.bulbagarden.net/upload/thumb/9/95/Yellow_EN_boxart.png/598px-Yellow_EN_boxart.png"></ion-img>Pokemon Yellow</ion-label>
+      <ion-radio value="Pokemon Yellow"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label><ion-img width="100" height="100" src="https://cdn.bulbagarden.net/upload/2/21/Green_JP_boxart.png"></ion-img>Pokemon Green</ion-label>
+      <ion-radio value="Pokemon Green"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label><ion-img width="100" height="100" src="https://cdn.bulbagarden.net/upload/thumb/c/c7/Gold_EN_boxart.png/200px-Gold_EN_boxart.png"></ion-img>Pokemon Gold</ion-label>
+      <ion-radio value="Pokemon Gold"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label><ion-img width="100" height="100" src="https://cdn.bulbagarden.net/upload/thumb/f/f5/Silver_EN_boxart.png/200px-Silver_EN_boxart.png"></ion-img>Pokemon Silver</ion-label>
+      <ion-radio value="Pokemon Silver"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label><ion-img width="100" height="100" src="https://cdn.bulbagarden.net/upload/thumb/6/60/Crystal_EN_boxart.png/200px-Crystal_EN_boxart.png"></ion-img>Pokemon Crystal</ion-label>
+      <ion-radio value="Pokemon Crystal"></ion-radio>
+    </ion-item>
+  </ion-list>
+  <button (click)="updateFavorite()" ion-button round>Save</button>

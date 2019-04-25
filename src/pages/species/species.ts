@@ -26,7 +26,7 @@ export class SpeciesPage {
   ionViewDidLoad(){
     this.pokeProvider.getPokemonSpecies().subscribe((data)=>
   {
-    this.species=data.results;
+    this.species=data.pokemon_entries;
   })
   }
 

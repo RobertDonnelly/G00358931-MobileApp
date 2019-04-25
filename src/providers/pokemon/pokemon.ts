@@ -20,15 +20,15 @@ getPokemonType():Observable<any>{
 
 
 getPokemonLocation():Observable<any>{
-  return this.http.get("https://pokeapi.co/api/v2/location/")
+  return this.http.get("https://pokeapi.co/api/v2/region/1/")
 }
 
 getPokemonSpecies():Observable<any>{
-  return this.http.get("https://pokeapi.co/api/v2/pokemon-species/")
+  return this.http.get("https://pokeapi.co/api/v2/pokedex/2/")
 }
 
 getPokemonMovie():Observable<any>{
-  return this.http.get("http://www.omdbapi.com/?apikey=dd0133f8&s=pokemon");
+  return this.http.get("http://www.omdbapi.com/?apikey=dd0133f8&s=pokemon movie");
 }
 
 }

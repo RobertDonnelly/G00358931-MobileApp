@@ -16,7 +16,7 @@
 <ion-content padding class="plimage"> 
     <h3>Pokemon</h3>
     <p>
-      Hello and welcome to the Pokemon app!
+      Welcome to the Pokemon Movies Page!
     </p>
     <button ion-button color="light" (click)="openHomePage()">Learn about Pokemon Types!</button>
     <button ion-button color="light" (click)="openLocationPage()">Learn about Locations in Pokemon!</button>
@@ -38,8 +38,8 @@
         <ion-img width="270" height="185" src="https://media1.tenor.com/images/03437a3a7a4a9084caecf563850e3569/tenor.gif?itemid=9054712"></ion-img> 
       </ion-card-content>
     </ion-card>
-      <h1>___________________________</h1>
-  <ion-list>
+    <br>
+    <ion-list>
     <ion-item *ngFor="let m of movies">
       <h2>{{m.Title}}</h2>
       <p> {{m.Year}}</p>
@@ -47,6 +47,5 @@
     </ion-item>
   </ion-list>      
   <br><br><br><br><br><br><br><br><br><br><br>
-  <h1>___________________________</h1>
-
+  <br>
 </ion-content>
